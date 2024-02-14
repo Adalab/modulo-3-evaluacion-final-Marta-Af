@@ -1,0 +1,69 @@
+@import "core/reset";
+ul {
+  list-style: none;
+}
+.page {
+  background-color: rgb(150, 125, 89);
+  padding: 1rem;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.filters {
+  display: flex;
+  //flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80rem;
+  label,
+  input,
+  select {
+    //flex: 1 1 50%;
+    margin-bottom: 10px;
+    // flex-basis: 100%;
+    margin-left: 0.1rem;
+    padding: 0.25rem 0;
+    margin: 0.5rem;
+    width: 22rem;
+    height: 2rem;
+    // border: 1px solid #7cbb00;
+    // border-radius: 5px;
+    cursor: pointer;
+    // transition: all ease 0.25s;
+    // &:hover {
+    //   border: 1px solid #ddd;
+  }
+}
+.container {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+}
+ul {
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    auto
+  ); /* Crea tres columnas de igual ancho */
+  grid-gap: 10px; /* Espacio entre las columnas */
+  list-style: none; /* Quita los marcadores de lista */
+  justify-content: center; /* Centra horizontalmente los elementos dentro de las columnas */
+}
+
+li {
+  border-color: brown;
+  border-radius: 2rem;
+  position: relative;
+  //width: 30rem;
+  margin: 0 1rem 1rem 0;
+  padding: 0.3rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+}
