@@ -48,16 +48,17 @@ ul {
 }
 ul {
   display: grid;
-  grid-template-columns: repeat(
-    3,
-    auto
-  ); /* Crea tres columnas de igual ancho */
-  grid-gap: 10px; /* Espacio entre las columnas */
-  list-style: none; /* Quita los marcadores de lista */
-  justify-content: center; /* Centra horizontalmente los elementos dentro de las columnas */
+  grid-template-columns: repeat(3, auto);
+  grid-gap: 10px;
+  list-style: none;
+  justify-content: center;
 }
 
 li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
   border-color: brown;
   border-radius: 2rem;
   position: relative;
@@ -66,4 +67,9 @@ li {
   padding: 0.3rem;
   border-radius: 0.5rem;
   border: 1px solid #ddd;
+}
+img {
+  width: 70%;
+  height: 70%;
+  object-fit: cover;
 }

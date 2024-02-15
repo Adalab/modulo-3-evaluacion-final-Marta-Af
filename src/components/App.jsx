@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 function App() {
   //Variables de estado
   const [persons, setPersons] = useState([]);
+  const [filterHouses, setFilterHouses] = useState("Gryffindor");
 
   //UseEffect
   useEffect(() => {
@@ -16,18 +17,26 @@ function App() {
       setPersons(responseData);
     });
   }, []); //Array cuando cargue la pagina
-  //Funciones de eventos
 
+  //Funciones de eventos
+  const handleChangeFilterHouse = (filterHouses) => {
+    setFilterHouses(filterHouses);
+  };
   //Variables para html
 
   //Html del return
-
+  const filteredHouse = persons.filter(
+    (persons) => persons.house === filterHouses
+  );
   return (
     <div className="page">
       <Header />
-      <Filters />
+      <Filters
+        filterHouses={filterHouses}
+        handleChangeFilterHouse={handleChangeFilterHouse}
+      />
       <div className="container">
-        <List persons={persons} />
+        <List persons={filteredHouse} />
       </div>
     </div>
   );

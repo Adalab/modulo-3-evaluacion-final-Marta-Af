@@ -2,15 +2,21 @@ import PropTypes from "prop-types";
 import FilterHouse from "./FilterHouse";
 import FilterName from "./FilterName";
 
-function Filters() {
+function Filters({ filterHouses, handleChangeFilterHouse }) {
   return (
     <form className="filters">
       <FilterName />
-      <FilterHouse />
+      <FilterHouse
+        filterHouses={filterHouses}
+        handleChangeFilterHouse={handleChangeFilterHouse}
+      />
     </form>
   );
 }
 
-Filters.propTypes = {};
+Filters.propTypes = {
+  filterHouses: PropTypes.string,
+  handleChangeFilterHouse: PropTypes.func,
+};
 
 export default Filters;
