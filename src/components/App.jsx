@@ -9,34 +9,43 @@ function App() {
   //Variables de estado
   const [persons, setPersons] = useState([]);
   const [filterHouses, setFilterHouses] = useState("Gryffindor");
+  const [filterNames, setFilterNames] = useState("");
 
   //UseEffect
   useEffect(() => {
-    //Cuando carga la pagina
     fetchPersons().then((responseData) => {
       setPersons(responseData);
     });
-  }, []); //Array cuando cargue la pagina
+  }, []);
 
   //Funciones de eventos
   const handleChangeFilterHouse = (filterHouses) => {
     setFilterHouses(filterHouses);
   };
+
+  const handleChangeFilterName = (filterNames) => {
+    setFilterNames(filterNames);
+  };
+
   //Variables para html
+  const filtered = persons
+    .filter((person) =>
+      person.name.toLowerCase().includes(filterNames.toLowerCase())
+    )
+    .filter((person) => person.house === filterHouses);
 
   //Html del return
-  const filteredHouse = persons.filter(
-    (persons) => persons.house === filterHouses
-  );
   return (
     <div className="page">
       <Header />
       <Filters
-        filterHouses={filterHouses}
+        handleChangeFilterName={handleChangeFilterName}
+        filterNames={filterNames}
         handleChangeFilterHouse={handleChangeFilterHouse}
+        filterHouses={filterHouses}
       />
       <div className="container">
-        <List persons={filteredHouse} />
+        <List persons={filtered} />
       </div>
     </div>
   );
