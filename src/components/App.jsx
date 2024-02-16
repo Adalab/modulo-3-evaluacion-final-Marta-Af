@@ -38,23 +38,37 @@ function App() {
     )
     .filter((person) => person.house === filterHouses);
 
+  const findPerson = (id) => {
+    return persons.find((persons) => persons.id === id);
+  };
   //Html del return
   return (
     <div className="page">
       <Header />
       <Routes>
-        <Route path="/" element={<List persons={filtered} />} />
-        <Route path="/person/:id" element={<PersonDetail />} />
+        <Route
+          path="/"
+          element={
+            <>
+              <Filters
+                handleChangeFilterName={handleChangeFilterName}
+                filterNames={filterNames}
+                handleChangeFilterHouse={handleChangeFilterHouse}
+                filterHouses={filterHouses}
+              />
+              <List persons={filtered} />
+            </>
+          }
+        />
+        <Route
+          path="/person/:id"
+          element={<PersonDetail findPerson={findPerson} />}
+        />
       </Routes>
-      <Filters
-        handleChangeFilterName={handleChangeFilterName}
-        filterNames={filterNames}
-        handleChangeFilterHouse={handleChangeFilterHouse}
-        filterHouses={filterHouses}
-      />
+
       <div className="container" />
       <footer>
-        <small>&copy; 2024 Adalabers PRomo Alice</small>
+        <small>&copy; 2024 Harry Potter Promo Alice</small>
       </footer>
     </div>
   );

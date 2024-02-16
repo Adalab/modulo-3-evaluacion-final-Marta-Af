@@ -14,7 +14,7 @@ function List({ persons }) {
 List.propTypes = {
   persons: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       image: PropTypes.string,
       name: PropTypes.string.isRequired,
       species: PropTypes.string.isRequired,

@@ -9,7 +9,12 @@ function FilterName({ handleChangeFilterName, filterName }) {
   return (
     <>
       <label htmlFor="inputName">Buscar por personaje:</label>
-      <input type="text" value={filterName} onChange={handleChangeName} />
+      <input
+        type="text"
+        value={filterName}
+        onChange={handleChangeName}
+        placeholder="Ej: Harry Potter"
+      />
     </>
   );
 }
