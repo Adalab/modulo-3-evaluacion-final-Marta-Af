@@ -41,6 +41,10 @@ function PersonDetail({ findPerson }) {
           <p>Nombre alternativo:{person.alternate_names}</p>
         </div>
       </div>
+      <button>
+        Comparte
+        <p></p>
+      </button>
     </>
   );
 }

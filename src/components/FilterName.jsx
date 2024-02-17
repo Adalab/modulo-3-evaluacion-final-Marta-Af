@@ -2,9 +2,10 @@ import PropTypes from "prop-types";
 
 function FilterName({ handleChangeFilterName, inputName }) {
   const handleChangeName = (event) => {
-    event.preventDefault();
     const resultFilter = event.currentTarget.value.toLowerCase();
     handleChangeFilterName(resultFilter);
+    // const errorMensaje = {inputName !== 0 ? (resultFilter) :  (
+    //   <p>{`No existe ningún personaje con el nombre ${inputName}`}</p>)};
   };
 
   return (
@@ -18,6 +19,7 @@ function FilterName({ handleChangeFilterName, inputName }) {
         onChange={handleChangeName}
         placeholder="Ej: Harry Potter"
       />
+      <div>{/* {errorMensaje} */}</div>
     </>
   );
 }

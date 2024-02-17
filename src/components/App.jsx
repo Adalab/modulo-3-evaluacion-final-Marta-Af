@@ -57,8 +57,17 @@ function App() {
                   inputName={inputName}
                   handleChangeFilterHouse={handleChangeFilterHouse}
                   selectHouses={selectHouses}
+                  persons={filtered}
                 />
-                <List persons={filtered} />
+                <div>
+                  {filtered.length > 0 ? (
+                    <List persons={filtered} />
+                  ) : (
+                    <p>
+                      No existe ningún personaje con el nombre {inputName}¡¡¡
+                    </p>
+                  )}
+                </div>
               </>
             }
           />
