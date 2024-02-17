@@ -7,12 +7,13 @@ import { fetchPersons } from "../components/services/fetch";
 import { useState, useEffect } from "react";
 import ls from "../components/services/localStorage";
 import { Routes, Route } from "react-router-dom";
+import NotFoundPage from "./NotFoundPage";
 
 function App() {
   //Variables de estado
   const [persons, setPersons] = useState([]);
-  const [filterHouses, setFilterHouses] = useState("Gryffindor");
-  const [filterNames, setFilterNames] = useState("");
+  const [selectHouses, setSelectHouses] = useState("Gryffindor");
+  const [inputName, setinputName] = useState("");
 
   //UseEffect
   useEffect(() => {
@@ -23,20 +24,20 @@ function App() {
   }, []);
 
   //Funciones de eventos
-  const handleChangeFilterHouse = (filterHouses) => {
-    setFilterHouses(filterHouses);
+  const handleChangeFilterHouse = (selectHouses) => {
+    setSelectHouses(selectHouses);
   };
 
-  const handleChangeFilterName = (filterNames) => {
-    setFilterNames(filterNames);
+  const handleChangeFilterName = (inputName) => {
+    setinputName(inputName);
   };
 
   //Variables para html
   const filtered = persons
     .filter((person) =>
-      person.name.toLowerCase().includes(filterNames.toLowerCase())
+      person.name.toLowerCase().includes(inputName.toLowerCase())
     )
-    .filter((person) => person.house === filterHouses);
+    .filter((person) => person.house === selectHouses);
 
   const findPerson = (id) => {
     return persons.find((persons) => persons.id === id);
@@ -45,28 +46,31 @@ function App() {
   return (
     <div className="page">
       <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Filters
-                handleChangeFilterName={handleChangeFilterName}
-                filterNames={filterNames}
-                handleChangeFilterHouse={handleChangeFilterHouse}
-                filterHouses={filterHouses}
-              />
-              <List persons={filtered} />
-            </>
-          }
-        />
-        <Route
-          path="/person/:id"
-          element={<PersonDetail findPerson={findPerson} />}
-        />
-      </Routes>
+      <main className="main">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Filters
+                  handleChangeFilterName={handleChangeFilterName}
+                  inputName={inputName}
+                  handleChangeFilterHouse={handleChangeFilterHouse}
+                  selectHouses={selectHouses}
+                />
+                <List persons={filtered} />
+              </>
+            }
+          />
+          <Route
+            path="/person/:id"
+            element={<PersonDetail findPerson={findPerson} />}
+          />
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes>
 
-      <div className="container" />
+        <div className="container" />
+      </main>
       <footer>
         <small>&copy; 2024 Harry Potter Promo Alice</small>
       </footer>

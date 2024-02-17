@@ -7,6 +7,15 @@ function PersonDetail({ findPerson }) {
 
   const person = findPerson(params.id);
 
+  if (!person) {
+    return (
+      <div>
+        <h1>Oops...</h1> <h1>No se encontró el personaje.</h1>
+      </div>
+    );
+  }
+  const statusPerson = person.alive ? "Viva" : "Muerto";
+  console.log(person);
   return (
     <>
       <div>
@@ -25,7 +34,11 @@ function PersonDetail({ findPerson }) {
         </div>
         <div>
           <h2 className="tittle_detail">{person.name}</h2>
-          <p>{person.species}</p>
+          <p>Especie:{person.species}</p>
+          <p>Estatus: {statusPerson}</p>
+          <p>Genero:{person.gender}</p>
+          <p>Casa: {person.house}</p>
+          <p>Nombre alternativo:{person.alternate_names}</p>
         </div>
       </div>
     </>

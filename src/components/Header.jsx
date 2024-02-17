@@ -1,9 +1,10 @@
 import PropTypes from "prop-types";
+import logo from "../images/logo-harrypotter.png";
 
 function Header() {
   return (
     <header className="header">
-      <h3>Harry Potter</h3>
+      <img className="image" src={logo} title="Logo" alt="Logo Harry Potter" />
     </header>
   );
 }

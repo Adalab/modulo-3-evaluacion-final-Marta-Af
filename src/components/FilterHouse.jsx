@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-function FilterHouse({ filterHouses, handleChangeFilterHouse }) {
+function FilterHouse({ selectHouses, handleChangeFilterHouse }) {
   const handleChange = (event) => {
     handleChangeFilterHouse(event.currentTarget.value);
   };
@@ -8,7 +8,7 @@ function FilterHouse({ filterHouses, handleChangeFilterHouse }) {
   return (
     <>
       <label htmlFor="houseSelect">Selecciona la casa:</label>
-      <select id="houseSelect" value={filterHouses} onChange={handleChange}>
+      <select id="houseSelect" value={selectHouses} onChange={handleChange}>
         <option value="Gryffindor">Gryffindor</option>
         <option value="Slytherin">Slytherin</option>
         <option value="Hufflepuff">Hufflepuff</option>
@@ -19,7 +19,7 @@ function FilterHouse({ filterHouses, handleChangeFilterHouse }) {
 }
 
 FilterHouse.propTypes = {
-  filterHouses: PropTypes.string,
+  selectHouses: PropTypes.string,
   handleChangeFilterHouse: PropTypes.func,
 };
 

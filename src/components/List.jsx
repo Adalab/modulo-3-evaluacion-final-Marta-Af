@@ -3,7 +3,7 @@ import Item from "./Item";
 
 function List({ persons }) {
   return (
-    <ul>
+    <ul className="list">
       {persons.map((person) => (
         <Item key={person.id} person={person} />
       ))}
@@ -18,6 +18,10 @@ List.propTypes = {
       image: PropTypes.string,
       name: PropTypes.string.isRequired,
       species: PropTypes.string.isRequired,
+      alternate_names: PropTypes.string,
+      gender: PropTypes.string,
+      alive: PropTypes.string,
+      house: PropTypes.string,
     })
   ),
 };

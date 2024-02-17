@@ -1,26 +1,50 @@
 @import "core/reset";
-ul {
-  list-style: none;
-}
+
 .page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
   background-color: rgb(150, 125, 89);
   padding: 1rem;
+  &_main {
+    max-width: 80vh;
+    width: 100%;
+    padding: 0 20px;
+  }
 }
+
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
+  // align-items: center;
+  &_image {
+    width: 80vw;
+    max-width: 600px;
+  }
 }
 .filters {
-  display: flex;
-  //flex-direction: row;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 80rem;
+  padding: 0px 25px 0px 25px;
+  // display: flex;
+  // //flex-direction: row;
+  // flex-direction: column;
+  // flex-wrap: wrap;
+  // justify-content: center;
+  // align-items: center;
+  // flex-wrap: wrap;
+  &_filter_name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 7px;
+    font-size: 22px;
+    color: white;
+    font-family: "pur";
+  }
+
   label,
   input,
   select {
@@ -48,10 +72,12 @@ ul {
 }
 ul {
   display: grid;
-  grid-template-columns: repeat(3, auto);
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
   list-style: none;
   justify-content: center;
+
+  list-style: none;
 }
 
 li {

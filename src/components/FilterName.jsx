@@ -1,17 +1,20 @@
 import PropTypes from "prop-types";
 
-function FilterName({ handleChangeFilterName, filterName }) {
+function FilterName({ handleChangeFilterName, inputName }) {
   const handleChangeName = (event) => {
+    event.preventDefault();
     const resultFilter = event.currentTarget.value.toLowerCase();
     handleChangeFilterName(resultFilter);
   };
 
   return (
     <>
-      <label htmlFor="inputName">Buscar por personaje:</label>
+      <label className="filter_name" htmlFor="inputName">
+        Buscar por personaje:
+      </label>
       <input
         type="text"
-        value={filterName}
+        value={inputName}
         onChange={handleChangeName}
         placeholder="Ej: Harry Potter"
       />
@@ -20,8 +23,8 @@ function FilterName({ handleChangeFilterName, filterName }) {
 }
 
 FilterName.propTypes = {
-  filterName: PropTypes.string,
-  handleChangeFilterName: PropTypes.func,
+  inputName: PropTypes.string.isRequired,
+  handleChangeFilterName: PropTypes.func.isRequired,
 };
 
 export default FilterName;

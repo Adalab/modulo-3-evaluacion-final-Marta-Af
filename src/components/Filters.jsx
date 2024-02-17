@@ -3,19 +3,19 @@ import FilterHouse from "./FilterHouse";
 import FilterName from "./FilterName";
 
 function Filters({
-  filterHouses,
+  selectHouses,
   handleChangeFilterHouse,
-  filterNames,
+  inputName,
   handleChangeFilterName,
 }) {
   return (
     <form className="filters">
       <FilterName
         handleChangeFilterName={handleChangeFilterName}
-        filterNames={filterNames}
+        inputName={inputName}
       />
       <FilterHouse
-        filterHouses={filterHouses}
+        selectHouses={selectHouses}
         handleChangeFilterHouse={handleChangeFilterHouse}
       />
     </form>
@@ -23,9 +23,9 @@ function Filters({
 }
 
 Filters.propTypes = {
-  filterNames: PropTypes.string,
+  inputName: PropTypes.string,
   handleChangeFilterName: PropTypes.func,
-  filterHouses: PropTypes.string,
+  selectHouses: PropTypes.string,
   handleChangeFilterHouse: PropTypes.func,
 };
 
