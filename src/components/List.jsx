@@ -14,11 +14,11 @@ function List({ persons }) {
 List.propTypes = {
   persons: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.string.isRequired,
+      id: PropTypes.number.isRequired,
       image: PropTypes.string,
       name: PropTypes.string.isRequired,
       species: PropTypes.string.isRequired,
-      alternate_names: PropTypes.string,
+      alternate_names: PropTypes.array,
       gender: PropTypes.string,
       alive: PropTypes.string,
       house: PropTypes.string,

@@ -6,6 +6,7 @@ function PersonDetail({ findPerson }) {
   const params = useParams();
 
   const person = findPerson(params.id);
+  console.log(person);
 
   if (!person) {
     return (
@@ -34,17 +35,13 @@ function PersonDetail({ findPerson }) {
         </div>
         <div>
           <h2 className="tittle_detail">{person.name}</h2>
-          <p>Especie:{person.species}</p>
+          <p>Especie: {person.species}</p>
           <p>Estatus: {statusPerson}</p>
-          <p>Genero:{person.gender}</p>
+          <p>Genero: {person.gender}</p>
           <p>Casa: {person.house}</p>
           <p>Nombre alternativo:{person.alternate_names}</p>
         </div>
       </div>
-      <button>
-        Comparte
-        <p></p>
-      </button>
     </>
   );
 }

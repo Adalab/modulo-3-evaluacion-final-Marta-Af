@@ -14,6 +14,7 @@ function App() {
   const [persons, setPersons] = useState([]);
   const [selectHouses, setSelectHouses] = useState("Gryffindor");
   const [inputName, setinputName] = useState("");
+  const [selectGender, setSelectGender] = useState("all");
 
   //UseEffect
   useEffect(() => {
@@ -32,12 +33,22 @@ function App() {
     setinputName(inputName);
   };
 
+  const handleChangeFilterGender = (gender) => {
+    setSelectGender(gender);
+  };
+
   //Variables para html
+  const filteredgender = persons.filter(
+    (persons) => selectGender === "all" || persons.gender == selectGender
+  );
   const filtered = persons
     .filter((person) =>
       person.name.toLowerCase().includes(inputName.toLowerCase())
     )
-    .filter((person) => person.house === selectHouses);
+    .filter((person) => person.house === selectHouses)
+    .filter(
+      (persons) => selectGender === "all" || persons.gender == selectGender
+    );
 
   const findPerson = (id) => {
     return persons.find((persons) => persons.id === id);
@@ -57,7 +68,9 @@ function App() {
                   inputName={inputName}
                   handleChangeFilterHouse={handleChangeFilterHouse}
                   selectHouses={selectHouses}
-                  persons={filtered}
+                  persons={filteredgender}
+                  selectGender={selectGender}
+                  handleChangeFilterGender={handleChangeFilterGender}
                 />
                 <div>
                   {filtered.length > 0 ? (
