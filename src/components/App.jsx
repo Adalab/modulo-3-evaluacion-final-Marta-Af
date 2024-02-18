@@ -45,7 +45,7 @@ function App() {
     .filter((person) =>
       person.name.toLowerCase().includes(inputName.toLowerCase())
     )
-    .filter((person) => person.house === selectHouses)
+    .filter((person) => selectHouses === "All" || person.house === selectHouses)
     .filter(
       (persons) => selectGender === "all" || persons.gender == selectGender
     );

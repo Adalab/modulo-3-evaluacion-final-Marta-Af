@@ -25,14 +25,16 @@ function FilterGender({ selectGender, handleChangeFilterGender }) {
         id="male"
         value="male"
       />
+      {/* <h2>Busca los personajes por género</h2> */}
+
       <label htmlFor="male">Hombre</label>
       <input
         type="radio"
-        checked={selectGender === "All"}
+        checked={selectGender === "all"}
         onChange={onChangeSelect}
         name="gender-all"
-        id="male"
-        value="All"
+        id="all"
+        value="all"
       />
       <label htmlFor="fender-all">Todos</label>
     </div>

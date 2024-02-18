@@ -29,7 +29,7 @@ Item.propTypes = {
     alternate_names: PropTypes.string,
     gender: PropTypes.string,
     alive: PropTypes.string,
-    house: PropTypes.string,
+    house: PropTypes.bool,
   }).isRequired,
 };
 

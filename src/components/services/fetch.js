@@ -9,8 +9,9 @@ export function fetchPersons() {
             species: eachPerson.species,
             house: eachPerson.house,
             image: eachPerson.image,
-            alternate_names: eachPerson.alternate_names,
-            gender: eachPerson.gender
+            gender: eachPerson.gender,
+            alternate_names: [eachPerson.alternate_names],
+           
 
           };
         });

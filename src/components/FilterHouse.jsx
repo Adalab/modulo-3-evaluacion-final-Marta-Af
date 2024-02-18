@@ -13,6 +13,7 @@ function FilterHouse({ selectHouses, handleChangeFilterHouse }) {
         <option value="Slytherin">Slytherin</option>
         <option value="Hufflepuff">Hufflepuff</option>
         <option value="Ravenclaw">Ravenclaw</option>
+        <option value="All">Todos</option>
       </select>
     </>
   );
