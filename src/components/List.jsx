@@ -20,7 +20,7 @@ List.propTypes = {
       species: PropTypes.string.isRequired,
       alternate_names: PropTypes.array,
       gender: PropTypes.string,
-      alive: PropTypes.bool.isRequired,
+      alive: PropTypes.bool,
       house: PropTypes.string,
     })
   ),

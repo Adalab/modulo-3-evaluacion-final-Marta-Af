@@ -26,10 +26,11 @@ Item.propTypes = {
     image: PropTypes.string,
     name: PropTypes.string.isRequired,
     species: PropTypes.string.isRequired,
-    alternate_names: PropTypes.string,
+
     gender: PropTypes.string,
     alive: PropTypes.string,
     house: PropTypes.bool,
+    alternate_names: PropTypes.array,
   }).isRequired,
 };
 
