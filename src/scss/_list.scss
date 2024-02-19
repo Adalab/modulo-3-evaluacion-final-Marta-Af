@@ -10,7 +10,8 @@
     border-radius: 1.5rem;
     border: 1.5px solid #ddd;
     h2,
-    h3 {
+    h3,
+    a {
       list-style: none;
       text-decoration: none;
       color: rgb(97, 8, 16);
@@ -21,4 +22,7 @@ img {
   width: 25vw;
   height: 50vh;
   object-fit: cover;
+  margin: 1rem;
+  border-radius: 1rem;
+  background: no-repeat;
 }

@@ -36,7 +36,7 @@ function PersonDetail({ findPerson }) {
     ) : person.species === "werewolf" ? (
       <>
         Hombrelobo
-        <img src={hombelobo} alt="hombelogo" className="logo" />
+        <img src={hombelobo} alt="hombelobo" className="logo" />
       </>
     ) : person.species === "cat" ? (
       <>

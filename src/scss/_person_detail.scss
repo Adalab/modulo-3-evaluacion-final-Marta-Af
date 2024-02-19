@@ -10,8 +10,8 @@
   width: 10rem;
   height: 2rem;
   margin: 2rem;
-  .link {
-    color: #f09a38;
+  a {
+    text-decoration: none;
   }
 }
 .tittle_detail {
@@ -25,12 +25,12 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
-  margin-left: 2rem;
+  // margin-left: 2rem;
 }
 .logo {
   width: 2rem;
   height: 2rem;
-  margin-left: 1rem;
+  // margin-left: 1rem;
 
   color: white;
 }
