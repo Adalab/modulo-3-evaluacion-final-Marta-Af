@@ -7,14 +7,16 @@ function FilterHouse({ selectHouses, handleChangeFilterHouse }) {
 
   return (
     <>
-      <label htmlFor="houseSelect">Selecciona la casa:</label>
-      <select id="houseSelect" value={selectHouses} onChange={handleChange}>
-        <option value="Gryffindor">Gryffindor</option>
-        <option value="Slytherin">Slytherin</option>
-        <option value="Hufflepuff">Hufflepuff</option>
-        <option value="Ravenclaw">Ravenclaw</option>
-        <option value="all">Todos</option>
-      </select>
+      <fieldset>
+        <label htmlFor="houseSelect">Selecciona la casa:</label>
+        <select id="houseSelect" value={selectHouses} onChange={handleChange}>
+          <option value="Gryffindor">Gryffindor</option>
+          <option value="Slytherin">Slytherin</option>
+          <option value="Hufflepuff">Hufflepuff</option>
+          <option value="Ravenclaw">Ravenclaw</option>
+          <option value="all">Todos</option>
+        </select>
+      </fieldset>
     </>
   );
 }

@@ -3,6 +3,22 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
 function Item({ person }) {
+  const speciesType =
+    person.species === "human"
+      ? "Humano"
+      : person.species === "werewolf"
+      ? "Hombre Lobo"
+      : person.species === "cat"
+      ? "Gato"
+      : person.species === "goblin"
+      ? "Duende"
+      : person.species === "owl"
+      ? "Búho"
+      : person.species === "ghost"
+      ? "Fantasma"
+      : person.species === "poltergeist"
+      ? "Poltergeist"
+      : "Desconocido";
   return (
     <Link to={"/person/" + person.id}>
       <li className="item" key={person.id}>
@@ -14,7 +30,7 @@ function Item({ person }) {
           alt=""
         />
         <h2 className="name_character">{person.name}</h2>
-        <h3 className="specie_character">{person.species}</h3>
+        <h3 className="specie_character">{speciesType}</h3>
       </li>
     </Link>
   );

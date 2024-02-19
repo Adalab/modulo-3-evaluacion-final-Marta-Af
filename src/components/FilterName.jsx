@@ -8,15 +8,16 @@ function FilterName({ handleChangeFilterName, inputName }) {
 
   return (
     <>
-      <label className="filter_name" htmlFor="inputName">
-        Buscar por personaje:
-      </label>
-      <input
-        type="text"
-        value={inputName}
-        onChange={handleChangeName}
-        placeholder="Ej: Harry Potter"
-      />
+      <fieldset>
+        <label htmlFor="inputName">Buscar por personaje:</label>
+        <input
+          className="input_name"
+          type="text"
+          value={inputName}
+          onChange={handleChangeName}
+          placeholder="Ej: Harry Potter"
+        />
+      </fieldset>
     </>
   );
 }

@@ -1,0 +1,105 @@
+.container_filters {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  height: 8rem;
+  margin-bottom: 4rem;
+  .filters {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 40rem;
+    fieldset {
+      width: 40rem;
+      height: 3rem;
+      padding-bottom: 2rem;
+      border-style: none;
+    }
+    label {
+      //   display: flex;
+      width: 15rem;
+      height: 5rem;
+      //   padding-bottom: 2rem;
+      //   padding-right: 2rem;
+    }
+    input,
+    select {
+      width: 15rem;
+      height: 2rem;
+    }
+    select {
+      margin-left: 2rem;
+    }
+    input {
+      margin-left: 0.8rem;
+    }
+  }
+  .filter_gender {
+    display: block;
+    padding-inline-start: 2px;
+    padding-inline-end: 2px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+    label {
+      margin-bottom: 5px;
+      width: 50%;
+    }
+
+    input[type="radio"] {
+      width: 50%; /* Ocupa todo el ancho disponible */
+      padding: 5px;
+      margin-bottom: 5px;
+    }
+  }
+}
+// }
+
+// .filters {
+//   padding: 0px 25px 0px 25px;
+//   display: inline-block;
+//   // //flex-direction: row;
+//   // flex-direction: column;
+//   // flex-wrap: wrap;
+
+//   justify-content: center;
+//   align-items: center;
+//   // flex-wrap: wrap;
+//   width: 100vw;
+
+//   &_filter_name {
+//     display: inline-block;
+//     // flex-direction: column;
+//     align-items: center;
+//     margin-bottom: 7px;
+//     font-size: 22px;
+//     color: white;
+//     font-family: "pur";
+//     .input_name {
+//       width: 18vw;
+//       height: 2rem;
+//     }
+//     .label_name {
+//     }
+//   }
+
+//   label,
+//   input,
+//   select {
+//     //flex: 1 1 50%;
+//     margin-bottom: 10px;
+//     // flex-basis: 100%;
+//     margin-left: 0.1rem;
+//     padding: 0.25rem 0;
+//     margin: 0.5rem;
+//     width: 22rem;
+//     height: 2rem;
+//     // border: 1px solid #7cbb00;
+//     // border-radius: 5px;
+//     cursor: pointer;
+//     // transition: all ease 0.25s;
+//     // &:hover {
+//     //   border: 1px solid #ddd;
+//   }

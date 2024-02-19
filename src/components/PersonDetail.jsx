@@ -30,7 +30,13 @@ function PersonDetail({ findPerson }) {
       : person.species === "ghost"
       ? "Fantasma"
       : person.species === "poltergeist"
-      ? "Poltergeist"
+      ? "Duende"
+      : person.species === "house-elf"
+      ? "Elfo Domestico"
+      : person.species === "acromantula"
+      ? "Acromántula"
+      : person.species === "hippogriff"
+      ? "Hippogriff"
       : "Desconocido";
   const genderType = person.gender === "male" ? "Hombre" : "Mujer";
 

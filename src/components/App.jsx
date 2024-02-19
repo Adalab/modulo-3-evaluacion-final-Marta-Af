@@ -5,7 +5,7 @@ import List from "./List";
 import PersonDetail from "./PersonDetail";
 import { fetchPersons } from "../components/services/fetch";
 import { useState, useEffect } from "react";
-import ls from "../components/services/localStorage";
+
 import { Routes, Route } from "react-router-dom";
 import NotFoundPage from "./NotFoundPage";
 
@@ -19,8 +19,10 @@ function App() {
   //UseEffect
   useEffect(() => {
     fetchPersons().then((responseData) => {
-      setPersons(responseData);
-      ls.set("persons", responseData);
+      const orderData = responseData.sort((a, b) =>
+        a.name.localeCompare(b.name)
+      );
+      setPersons(orderData);
     });
   }, []);
 
@@ -53,6 +55,7 @@ function App() {
   const findPerson = (id) => {
     return persons.find((persons) => persons.id === id);
   };
+
   //Html del return
   return (
     <div className="page">

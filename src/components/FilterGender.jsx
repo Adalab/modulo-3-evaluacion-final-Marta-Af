@@ -6,7 +6,9 @@ function FilterGender({ selectGender, handleChangeFilterGender }) {
   };
 
   return (
-    <div>
+    <legend className="filter_gender">
+      Busca por género:
+      <label htmlFor="female">Mujer</label>
       <input
         type="radio"
         checked={selectGender === "female"}
@@ -15,8 +17,7 @@ function FilterGender({ selectGender, handleChangeFilterGender }) {
         id="female"
         value="female"
       />
-      <label htmlFor="female">Mujer</label>
-
+      <label htmlFor="male">Hombre</label>
       <input
         type="radio"
         checked={selectGender === "male"}
@@ -25,9 +26,9 @@ function FilterGender({ selectGender, handleChangeFilterGender }) {
         id="male"
         value="male"
       />
-      {/* <h2>Busca los personajes por género</h2> */}
-
-      <label htmlFor="male">Hombre</label>
+      <label className="" htmlFor="gender-all">
+        Todos
+      </label>
       <input
         type="radio"
         checked={selectGender === "all"}
@@ -36,8 +37,7 @@ function FilterGender({ selectGender, handleChangeFilterGender }) {
         id="all"
         value="all"
       />
-      <label htmlFor="fender-all">Todos</label>
-    </div>
+    </legend>
   );
 }
 
