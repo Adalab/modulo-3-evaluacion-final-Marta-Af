@@ -1,0 +1,24 @@
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 15px;
+  list-style: none;
+  justify-content: center;
+  list-style: none;
+
+  li {
+    border-radius: 1.5rem;
+    border: 1.5px solid #ddd;
+    h2,
+    h3 {
+      list-style: none;
+      text-decoration: none;
+      color: rgb(97, 8, 16);
+    }
+  }
+}
+img {
+  width: 25vw;
+  height: 50vh;
+  object-fit: cover;
+}

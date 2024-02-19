@@ -24,9 +24,9 @@
   display: flex;
   justify-content: center;
   padding: 30px 5px;
+  width: 100%;
+  .image {
+    width: 80vw;
+    height: auto;
+  }
 }
-
-.header__image {
-  width: 80vw;
-}
-// }

@@ -96,7 +96,7 @@ function App() {
 
         <div className="container" />
       </main>
-      <footer>
+      <footer className="footer">
         <small>&copy; 2024 Harry Potter Promo Alice</small>
       </footer>
     </div>

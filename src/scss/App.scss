@@ -1,38 +1,6 @@
 @import "core/reset";
 @import "header";
-@import "core/filters";
-.container {
-  .container {
-    display: flex;
-    justify-content: center;
-  }
-}
-ul {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
-  list-style: none;
-  justify-content: center;
-
-  list-style: none;
-}
-
-// li {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   padding: 10px;
-//   border-color: brown;
-//   border-radius: 2rem;
-//   position: relative;
-//   //width: 30rem;
-//   margin: 0 1rem 1rem 0;
-//   padding: 0.3rem;
-//   border-radius: 0.5rem;
-//   border: 1px solid #ddd;
-// }
-img {
-  width: 70%;
-  height: 70%;
-  object-fit: cover;
-}
+@import "filters";
+@import "list.scss";
+@import "person_detail";
+@import "footer";

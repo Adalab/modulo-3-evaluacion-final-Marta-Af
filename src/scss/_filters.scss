@@ -36,7 +36,8 @@
     }
   }
   .filter_gender {
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding-inline-start: 2px;
     padding-inline-end: 2px;
     border-width: initial;
@@ -45,11 +46,9 @@
     border-image: initial;
     label {
       margin-bottom: 5px;
-      width: 50%;
     }
 
-    input[type="radio"] {
-      width: 50%; /* Ocupa todo el ancho disponible */
+    input {
       padding: 5px;
       margin-bottom: 5px;
     }
